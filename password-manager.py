@@ -1,8 +1,5 @@
 master_pwd = input("What is the master password? ")
 
-def view():
-    print("Andrew")
-
 def add():
     account_name = input("Account Name: ")
     account_pwd = input("Password: ")
@@ -10,6 +7,12 @@ def add():
     # Use "with" keyword to automatically close file after we are done with actions
     # "w" = write/create/override new file; "r" = read file; "a" = append mode to add at end of existing file or create new file if non-existant
     with open("vault.txt", "a") as f:
+        f.write(account_name + "|" + account_pwd + "\n")
+
+def view():
+    with open("vault.txt", "r") as f:
+        for line in f.readlines():
+            print(line)
 
 while True:
     mode = input("Add a new password or view existing ones (add, view)? Or type Q to quit: ").lower()
