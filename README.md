@@ -4,9 +4,10 @@
 Organize and store passwords as encrypted credentials
 
 ## Program Logic
-- Ask user for a master password to authorize access to the vault
+- Ask user for a master password to authorize access to the "vault"
 - Ask user if they want to add a new password or view existing passwords
     - Define these selections as functions
+- If adding a password, create/open a file "vault" to store the new password
 
 ## Learnings
 - Functions
