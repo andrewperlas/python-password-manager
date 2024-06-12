@@ -8,6 +8,8 @@ Organize and store passwords as encrypted credentials
 - Ask user if they want to add a new password or view existing passwords
     - Define these selections as functions
 - If adding a password, create/open a file "vault" to store the new password
+- If viewing passwords, output a list of passwords in existing vault
+
 
 ## Learnings
 - Functions
