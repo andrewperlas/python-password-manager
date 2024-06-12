@@ -12,7 +12,13 @@ def add():
 def view():
     with open("vault.txt", "r") as f:
         for line in f.readlines():
-            print(line)
+            data = line.rstrip()
+            # "rstrip" will remove the \n from the add() function when we attempt to read the file
+            
+            username, pwd = data.split("|")
+            # "split" identifies the "|" as a separator character and then places the values before/after the separator into a list
+            
+            print(f"Username: {username} | Password: {pwd}")
 
 while True:
     mode = input("Add a new password or view existing ones (add, view)? Or type Q to quit: ").lower()
